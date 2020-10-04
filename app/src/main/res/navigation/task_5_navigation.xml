@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/task_5_navigation"
+    app:startDestination="@id/task_5_destination_1">
+
+    <fragment
+        android:id="@+id/task_5_destination_1"
+        android:name="com.example.androidlab3.task5.Fragment1"
+        android:label="Activity 1">
+        <action
+            android:id="@+id/first_to_second"
+            app:destination="@id/task_5_destination_2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task_5_destination_2"
+        android:name="com.example.androidlab3.task5.Fragment2"
+        android:label="Activity 2">
+        <action
+            android:id="@+id/second_to_first"
+            app:destination="@id/task_5_destination_1" />
+        <action
+            android:id="@+id/second_to_third"
+            app:destination="@id/task_5_destination_3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task_5_destination_3"
+        android:name="com.example.androidlab3.task5.Fragment3"
+        android:label="Activity 3">
+        <action
+            android:id="@+id/third_to_first"
+            app:destination="@id/task_5_destination_1" />
+        <action
+            android:id="@+id/third_to_second"
+            app:destination="@id/task_5_destination_2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task_5_destination_search"
+        android:name="com.example.androidlab3.task5.FragmentSearch"
+        android:label="Search">
+        <action
+            android:id="@+id/search_to_first"
+            app:destination="@id/task_5_destination_1" />
+    </fragment>
+
+</navigation>
